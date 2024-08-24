@@ -23,7 +23,7 @@ const Resume: React.FC = () => {
         <div className='cursor-pointer border w-[12rem] flex justify-center border-indigo-500 hover:border-gray-500 rounded-xl p-3 text-indigo-600 hover:bg-gradient-to-r from-[#583683] to-[#413451] hover:text-gray-100 text-[1.2rem] font-semibold' onClick={() => DownloadPDfcall()}>Download Resume </div>
       </div>
       
-      <div className="pdf-container">
+      <div className="pdf-container hidden lg:block">
         <div className="flex justify-center p-4  rounded-lg ">
             <div className="pdf-wrapper relative"> <object className="pdf-object" data={`${PDF}#toolbar=0&navpanes=0&statusbar=0`} type="application/pdf" width="800" height="700"> </object>  </div>
         </div>

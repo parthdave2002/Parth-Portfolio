@@ -1,16 +1,10 @@
-import { PiMedalThin } from "react-icons/pi";
-
+import Error from "../../../public/404-error_23-2147737151.jpg";
 
 const PageNotFound = () => {
   return (
     <>
-      <div className="lg:h-screen w-screen px-6 py-6 lg:flex justify-around">
-        <div>
-            <div className="flex justify-center gap-x-5"> 
-                <div className="self-center"> <PiMedalThin className="self-center text-[2.5rem] lg:text-[3rem] font-normal self-center text-indigo-600 "/></div>
-                <div className="self-center bg-gradient-to-r from-indigo-500 via-indigo-300 to-indigo-100 text-transparent inline-block bg-clip-text text-[2rem] lg:text-[2.5rem] font-bold"> Page Not Found</div>
-            </div> 
-        </div>
+      <div className=" px-6 py-[4rem] lg:flex justify-around">
+            <div className="flex justify-center"> <img src={Error} className="lg:h-[26rem]  rounded-[2rem]"  alt="profile photo" />    </div>
       </div>
     </>
   );
