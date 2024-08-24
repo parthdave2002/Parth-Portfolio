@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { GoMortarBoard } from "react-icons/go";
 import { PiMedalThin } from "react-icons/pi";
-
 
 const MyEducation = () => {
   return (

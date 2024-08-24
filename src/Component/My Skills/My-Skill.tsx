@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {FaHtml5, FaNodeJs, FaReact } from "react-icons/fa";
 import { SiExpress, SiMongodb, SiTypescript  } from "react-icons/si";
 import { RiTailwindCssLine, RiJavascriptFill  } from "react-icons/ri";

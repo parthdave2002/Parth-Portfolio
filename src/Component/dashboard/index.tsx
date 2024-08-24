@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Dashboard from "./dashboard";
 import MyEducation from "../My Education/My-Education";
 import MySkill from "../My Skills/My-Skill";

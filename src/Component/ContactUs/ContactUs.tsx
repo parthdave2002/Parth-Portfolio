@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { FiPhoneCall, FiMail  } from "react-icons/fi";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { Button, Input } from "reactstrap";

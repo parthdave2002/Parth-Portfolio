@@ -1,6 +1,5 @@
-import { useState } from "react";
 import Profile from "../../../public/My_photo.jpeg";
-import { FaInstagram, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import {  FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Dashboard = () => {
   return (
