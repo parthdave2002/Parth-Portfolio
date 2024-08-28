@@ -34,19 +34,19 @@ const MyEducation = () => {
 
             <div className="flex flex-col gap-y-6 p-4">
                 <div className="border-0 rounded-xl bg-[#271639] shadow shadow-md  p-4 hover:bg-gradient-to-r from-[#271639] via-[#583683] to-[#8a55cd]">
-                    <div className="text-[#8750f7] text-[1.3rem] font-semibold">2023 - Present</div> 
+                    <div className="text-[#8750f7] text-[1.3rem] font-semibold">2019 - 2022</div> 
                     <div className="text-[1.5rem] font-semibold text-gray-100"> BCA (Bachelor of Computer Applications) </div> 
                     <div className="text-[1.3rem] font-normal text-gray-100">JG College of computer application</div> 
                 </div>
 
                 <div className="border-0 rounded-xl bg-[#271639] shadow shadow-md  p-4 hover:bg-gradient-to-r from-[#271639] via-[#583683] to-[#8a55cd] ">
-                    <div className="text-[#8750f7] text-[1.3rem] font-semibold">2022 - 2023</div> 
+                    <div className="text-[#8750f7] text-[1.3rem] font-semibold">2018 - 2019</div> 
                     <div className="text-[1.5rem] font-semibold text-gray-100"> HSC (Higher Secondary School Certificate) </div> 
                     <div className="text-[1.3rem] font-normal text-gray-100">Swaminarayan school</div> 
                 </div>
 
                 <div className="border-0 rounded-xl bg-[#271639] shadow shadow-md  p-4 hover:text-gray-100 hover:bg-gradient-to-r from-[#271639] via-[#583683] to-[#8a55cd] ">
-                    <div className="text-[#8750f7] text-[1.3rem] font-semibold">2022 - 2023</div> 
+                    <div className="text-[#8750f7] text-[1.3rem] font-semibold">2016 - 2017</div> 
                     <div className="text-[1.5rem] font-semibold text-gray-100"> SSC (Secondary School Certificate) </div> 
                     <div className="text-[1.3rem] font-normal text-gray-100">Rachna high school</div> 
                 </div>
