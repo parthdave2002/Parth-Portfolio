@@ -37,6 +37,7 @@ const Header = () => {
               <Link to="/" className="block hover:text-[#8750f7] py-2 px-4 cursor-pointer underline-animation">  Home </Link>
               <Link to="/about" className="block hover:text-[#8750f7] py-2 px-4 cursor-pointer underline-animation">  About me </Link>
               <Link to="/resume" className="block hover:text-[#8750f7] py-2 px-4 cursor-pointer underline-animation">  Resume </Link>
+              <Link to="/certificate" className="block hover:text-[#8750f7] py-2 cursor-pointer">  Certificates </Link>
               <Link to="/contactUs"className="block hover:text-[#8750f7] py-2 px-4 cursor-pointer underline-animation"> Contact Us </Link>
             </div>
 
@@ -48,7 +49,9 @@ const Header = () => {
               <Link to="/" className="block hover:text-[#8750f7] py-2 cursor-pointer"> Home</Link>
               <Link to="/about" className="block hover:text-[#8750f7] py-2 cursor-pointer">  About me  </Link>
               <Link to="/resume" className="block hover:text-[#8750f7] py-2 cursor-pointer">  Resume </Link>
+              <Link to="/certificate" className="block hover:text-[#8750f7] py-2 cursor-pointer">  Certificates </Link>
               <Link to="/contactUs" className="block hover:text-[#8750f7] py-2 cursor-pointer">  Contact Us </Link>
+
             </div>
           )}
         </nav>

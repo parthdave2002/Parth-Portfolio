@@ -7,6 +7,7 @@ import About from "./Component/About/About";
 import Resume from "./Component/Resume/Resume";
 import ContactUs from "./Component/ContactUs/ContactUs";
 import PageNotFound from "./Component/PageNotFound/PageNotFound";
+import Certificate from "./Component/Certificate/Certificate";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
                   <Route path="/about" element={<About /> } />
                   <Route path="/resume" element={<Resume /> } />
                   <Route path="/contactUs" element={<ContactUs /> } />
+                  <Route path="/certificate" element={<Certificate /> } />
                   <Route path="*" element={<PageNotFound /> } />
               </Routes>
             <Footer />
