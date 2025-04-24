@@ -24,7 +24,7 @@ const Dashboard = () => {
           
           <div className="lg:flex justify-around px-[2rem] py-[2rem]">
             <div className="rounded-md flex gap-x-3 text-center self-center text-gray-100 ">
-              <div className="text-[3.2rem] lg:text-[4.5rem] font-bold"> 2.5</div>
+              <div className="text-[3.2rem] lg:text-[4.5rem] font-bold"> 03</div>
               <div className="self-center text-[1rem] lg:text-[1.2rem] font-semibold leading-6 text-left"> Years of <br /> Experience </div> 
             </div>
             <div className="rounded-md flex gap-x-3 text-center self-center text-gray-100 ">

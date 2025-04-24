@@ -12,8 +12,15 @@ const MyEducation = () => {
             </div> 
 
             <div className="flex flex-col gap-y-6 p-4">
+
                 <div className="border-0 rounded-xl bg-[#271639] shadow shadow-md lg:min-w-[33rem] lg:max-w-[33rem] p-4 hover:bg-gradient-to-r from-[#271639] via-[#583683] to-[#8a55cd]">
-                    <div className="text-[#8750f7] text-[1.3rem] font-semibold">2023 - Present</div> 
+                    <div className="text-[#8750f7] text-[1.3rem] font-semibold">2024 - 2025</div> 
+                    <div className="text-[1.5rem] font-semibold text-gray-100">REACT.JS DEVELOPER </div> 
+                    <div className="text-[1.3rem] font-normal text-gray-100"> CMARIX </div> 
+                </div>
+
+                <div className="border-0 rounded-xl bg-[#271639] shadow shadow-md lg:min-w-[33rem] lg:max-w-[33rem] p-4 hover:bg-gradient-to-r from-[#271639] via-[#583683] to-[#8a55cd]">
+                    <div className="text-[#8750f7] text-[1.3rem] font-semibold">2023 - 2024</div> 
                     <div className="text-[1.5rem] font-semibold text-gray-100">REACT.JS DEVELOPER </div> 
                     <div className="text-[1.3rem] font-normal text-gray-100">Agrovikas Agritech PVT LTD</div> 
                 </div>

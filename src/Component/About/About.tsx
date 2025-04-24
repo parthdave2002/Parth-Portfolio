@@ -13,23 +13,45 @@ const About = () => {
               <ul className='list-outside list-disc ml-6'>  <li className="text-indigo-500"><div className="self-center content-center text-left text-gray-100 text-[1.3rem] font-normal  whitespace-pre-line text-wrap " > Secondary School (SSC), Rachana high school - 2017</div></li> </ul>
 
               <div className="self-center flex justify-center text-center bg-gradient-to-r from-indigo-500 via-indigo-300 to-indigo-100 text-transparent inline-block bg-clip-text lg:text-[2.5rem] text-[1.8rem] font-bold underline-animation"> Professional Experience</div>
-              <div className="flex flex-col gap-y-[4rem]">
-                <div>
-                  <div className="lg:flex gap-x-[15rem]">
-                    <div className=" self-center content-center text-left text-gray-100 text-[1.3rem] font-normal whitespace-pre-line text-wrap" > Software Developer | Agrovikas Agritech PVT LTD</div> 
-                    <div className=" self-center content-center text-left text-gray-100 text-[1.3rem] font-normal whitespace-pre-line text-wrap" > May 2023 - Current</div> 
-                  </div>
-                  <ul className='list-outside list-disc ml-6'>  <li className="text-indigo-500"><div className="self-center content-center text-left text-gray-100 text-[1.3rem] font-normal  whitespace-pre-line text-wrap" > Skills and Tools: Tailwind Css, Node.js, Express.js, MongoDB, Typescript, Trello </div></li> </ul>
-                </div>
+              <div className="flex flex-col gap-y-16">
+  {[
+    {
+      title: "Software Developer | CMARIX",
+      duration: "Oct 2024 - Current",
+      skills: "Redux-toolkit, Gitlab",
+    },
+    {
+      title: "Software Developer | Agrovikas Agritech PVT LTD",
+      duration: "May 2023 - Oct 2024",
+      skills: "Tailwind Css, Node.js, Express.js, MongoDB, Typescript, Trello",
+    },
+    {
+      title: "Software Developer | Avanzar Solution",
+      duration: "May 2022 - May 2023",
+      skills:
+        "HTML, CSS, Javascript, React.js, React-Bootstrap, React-Redux, Redux-Saga, Bitbucket, Jira",
+    },
+  ].map((job, index) => (
+    <div key={index}>
+      <div className="lg:flex justify-between gap-x-24">
+        <div className="text-left text-gray-100 text-[1.3rem] font-normal whitespace-pre-line">
+          {job.title}
+        </div>
+        <div className="text-left text-gray-100 text-[1.3rem] font-normal whitespace-pre-line">
+          {job.duration}
+        </div>
+      </div>
+      <ul className="list-disc list-outside ml-6 mt-2">
+        <li className="text-indigo-500">
+          <div className="text-left text-gray-100 text-[1.3rem] font-normal whitespace-pre-line">
+            Skills and Tools: {job.skills}
+          </div>
+        </li>
+      </ul>
+    </div>
+  ))}
+</div>
 
-                <div>
-                  <div className="lg:flex gap-x-[15rem]">
-                    <div className=" self-center content-center text-left text-gray-100 text-[1.3rem] font-normal whitespace-pre-line text-wrap" > Software Developer | Avanzar Solution</div> 
-                    <div className=" self-center content-center text-left text-gray-100 text-[1.3rem] font-normal whitespace-pre-line text-wrap" > May 2022 - May 2023</div> 
-                  </div>
-                  <ul className='list-outside list-disc ml-6'>  <li className="text-indigo-500"><div className="self-center content-center text-left text-gray-100 text-[1.3rem] font-normal  whitespace-pre-line text-wrap" > Skills and Tools: HTML, CSS, Javascript React.js,React-Bootstrap, React-Redux, Redux-Saga, Bitbucket, Jira </div></li> </ul>
-                </div>
-              </div> 
 
               <div className="self-center flex justify-center text-center bg-gradient-to-r from-indigo-500 via-indigo-300 to-indigo-100 text-transparent inline-block bg-clip-text lg:text-[2.5rem] text-[1.8rem] font-bold underline-animation"> Project Details</div>
               <div className="flex flex-col gap-y-[4rem]">
@@ -91,6 +113,28 @@ const About = () => {
                   <ul className='list-outside list-disc ml-6'>  <li className="text-indigo-500"><div className="self-center content-center text-left text-gray-100 text-[1.3rem] font-normal  whitespace-pre-line text-wrap" >Implemented API binding for seamless server communication. </div></li> </ul>
                   <ul className='list-outside list-disc ml-6'>  <li className="text-indigo-500"><div className="self-center content-center text-left text-gray-100 text-[1.3rem] font-normal  whitespace-pre-line text-wrap" >Integrated login with google and login with Facebook for customer login.</div></li> </ul>
                   <ul className='list-outside list-disc ml-6'>  <li className="text-indigo-500"><div className="self-center content-center text-left text-gray-100 text-[1.3rem] font-normal  whitespace-pre-line text-wrap" >Integrated a secure payment gateway, such as PayPal, enabling transactions via Visa & MasterCard.</div></li> </ul>
+                </div>
+
+                <div>
+                  <div className="">
+                    <div className=" self-center content-center text-left text-gray-100 text-[1.3rem] font-normal whitespace-pre-line text-wrap" >Project : Datebook AI - Admin Panel </div> 
+                    <div className="self-center content-center text-left text-gray-100 text-[1.3rem] font-normal whitespace-pre-line text-wrap">
+                      Datebook AI is a dating Application. In that Application User can create account using mail id and after that base on profile criteria user can show interestd user profile.
+                      After that user can create Video call schedule, Meet up schdule, Chat. 
+                      User can gives other profile to Like, Super like, Dislike. User also can block and report other user.
+                      From Admin panel admin can show all the data and Export in CSV and Excel format. & Admin can create Notification for application user.
+                      Super Admin can manage role permission. 
+                    </div>
+                  </div>
+                  
+                  <ul className='list-outside list-disc ml-6'>  <li className="text-indigo-500"><div className="self-center content-center text-left text-gray-100 text-[1.3rem] font-normal  whitespace-pre-line text-wrap" >Created list modules and given access that modules as per give access to that role.  </div></li> </ul>
+                  <ul className='list-outside list-disc ml-6'>  <li className="text-indigo-500"><div className="self-center content-center text-left text-gray-100 text-[1.3rem] font-normal  whitespace-pre-line text-wrap" > Bulk Upload user functionality.  Admin can add multiple user at a same time. </div></li> </ul>
+                  <ul className='list-outside list-disc ml-6'>  <li className="text-indigo-500"><div className="self-center content-center text-left text-gray-100 text-[1.3rem] font-normal  whitespace-pre-line text-wrap" >Successfully integrated a REST APIs. </div></li> </ul>
+                  <ul className='list-outside list-disc ml-6'>  <li className="text-indigo-500"><div className="self-center content-center text-left text-gray-100 text-[1.3rem] font-normal  whitespace-pre-line text-wrap" > There is a Export data functionality in CSV and Excel format.  </div></li> </ul>
+                  <ul className='list-outside list-disc ml-6'>  <li className="text-indigo-500"><div className="self-center content-center text-left text-gray-100 text-[1.3rem] font-normal  whitespace-pre-line text-wrap" >Implemented API bindings for seamless communication with the server </div></li> </ul>
+                  <ul className='list-outside list-disc ml-6'>  <li className="text-indigo-500"><div className="self-center content-center text-left text-gray-100 text-[1.3rem] font-normal  whitespace-pre-line text-wrap" >Proactively identified and resolved software bugs while providing ongoing support to the team </div></li> </ul>
+                  <ul className='list-outside list-disc ml-6'>  <li className="text-indigo-500"><div className="self-center content-center text-left text-gray-100 text-[1.3rem] font-normal  whitespace-pre-line text-wrap" >Conducted weekly client demonstrations to showcase newly developed features </div></li> </ul>
+
                 </div>
 
               </div> 
