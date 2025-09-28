@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { FaBug, FaDatabase, FaMobile, FaPencilRuler, FaShoppingBag } from "react-icons/fa";
 import { TfiWorld } from "react-icons/tfi";
 import { SiFastapi } from "react-icons/si";
