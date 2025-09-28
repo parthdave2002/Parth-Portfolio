@@ -8,16 +8,19 @@ import Resume from "./Component/Resume/Resume";
 import ContactUs from "./Component/ContactUs/ContactUs";
 import PageNotFound from "./Component/PageNotFound/PageNotFound";
 import Certificate from "./Component/Certificate/Certificate";
+import Project from "./Component/Project/ProjectPage";
 
 function App() {
   return (
     <>
-      <div className="bg-[#0f0715]">
+      {/* Set min-h-screen and add top padding to prevent header overlap */}
+      <div className="bg-[#0f0715] min-h-screen pt-20">
         <BrowserRouter>
             <Header />
               <Routes>
                   <Route path="/" element={<Dashboard /> } />
                   <Route path="/about" element={<About /> } />
+                  <Route path="/project" element={<Project /> } />
                   <Route path="/resume" element={<Resume /> } />
                   <Route path="/contactUs" element={<ContactUs /> } />
                   <Route path="/certificate" element={<Certificate /> } />

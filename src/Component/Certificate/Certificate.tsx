@@ -1,7 +1,16 @@
+import { useEffect } from "react";
 import HRcertificate from "../../../public/frontend_developer_react certificate_page-0001.jpg"
 
 
 const Certificate = () => {
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0, // Subtract the offset value from the section's top position
+      behavior: 'smooth',
+    });
+  }, [])
+
   return (
     <>
       <div className="min-h-screen w-screen px-6 py-6 ">

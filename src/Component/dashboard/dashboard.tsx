@@ -1,10 +1,19 @@
+import { useEffect } from "react";
 import Profile from "../../../public/My_photo.jpeg";
 import {  FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Dashboard = () => {
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0, // Subtract the offset value from the section's top position
+      behavior: 'smooth',
+    });
+  }, [])
+
   return (
     <>
-     <div className="w-screen lg:h-screen py-3 lg:py-[5rem] bg-[#0f0715] flex flex-col justify-around">
+     <div className="w-screen lg:h-screen py-10 lg:py-[5rem] bg-[#0f0715] flex flex-col justify-around">
           <div className="lg:flex justify-around px-6 py-6">
             <div className="py-6 gap-y-3">
                 <div className="text-gray-50 text-[1.5rem] font-bold">HI,I am Parth Dave</div>
@@ -28,11 +37,11 @@ const Dashboard = () => {
               <div className="self-center text-[1rem] lg:text-[1.2rem] font-semibold leading-6 text-left"> Years of <br /> Experience </div> 
             </div>
             <div className="rounded-md flex gap-x-3 text-center self-center text-gray-100 ">
-              <div className="text-[3.2rem] lg:text-[4.5rem] font-bold"> 03 </div>
+              <div className="text-[3.2rem] lg:text-[4.5rem] font-bold"> 05 </div>
               <div className="self-center text-[1rem] lg:text-[1.2rem] font-semibold leading-6 text-left"> Project <br /> Completed </div> 
             </div>
             <div className="rounded-md flex gap-x-3 text-center self-center text-gray-100 ">
-              <div className="text-[3.2rem] lg:text-[4.5rem] font-bold"> 01</div>
+              <div className="text-[3.2rem] lg:text-[4.5rem] font-bold"> 02</div>
               <div className="self-center text-[1rem] lg:text-[1.2rem] font-semibold leading-6 text-left">  Current <br /> Project </div> 
             </div>
           </div>

@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PDF from "/Parth_Dave_Resume.pdf";
 
 const Resume: React.FC = () => {
-    const DownloadPDfcall = () =>{
-        const pdfUrl = "/Parth_Dave_Resume.pdf";
-        const link = document.createElement("a");
-        link.href = pdfUrl;
-        link.download = "/Parth_Dave_Resume.pdf"; // specify the filename
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    }
+  const DownloadPDfcall = () => {
+    const pdfUrl = "/Parth_Dave_Resume.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "/Parth_Dave_Resume.pdf"; // specify the filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0, // Subtract the offset value from the section's top position
+      behavior: 'smooth',
+    });
+  }, [])
 
   return (
     <div className="min-h-screen w-screen px-8 py-8 self-center text-center">

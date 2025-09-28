@@ -1,66 +1,125 @@
-import { GoMortarBoard } from "react-icons/go";
-import { PiMedalThin } from "react-icons/pi";
+import { useState, useEffect } from "react";
 
 const MyEducation = () => {
+  const [activeTab, setActiveTab] = useState<"experience" | "education">("experience");
+  
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => setMounted(true), 50);
+    return () => clearTimeout(timer);
+  }, []);
+
+    const skills = [
+    { name: "HTML", value: 85, color: "bg-orange-400" },
+    { name: "Tailwind CSS", value: 85, color: "bg-purple-400" },
+    { name: "Javascript", value: 80, color: "bg-yellow-400" },
+    { name: "Typescript", value: 80, color: "bg-blue-400" },
+    { name: "React JS", value: 90, color: "bg-purple-500" },
+    { name: "Node JS", value: 50, color: "bg-green-500" },
+    { name: "Express JS", value: 75, color: "bg-gray-500" },
+    { name: "Mongodb", value: 50, color: "bg-green-500" },
+    ];
+
+    const education = [
+    {
+        year: "2019 - 2022",
+        title: "BCA (Bachelor of Computer Applications)",
+        place: "JG College of Computer Application",
+    },
+    {
+        year: "2018 - 2019",
+        title: "HSC (Higher Secondary School Certificate)",
+        place: "Swaminarayan School",
+    },
+    {
+        year: "2016 - 2017",
+        title: "SSC (Secondary School Certificate)",
+        place: "Rachna High School",
+    },
+    ];
+
+    const experience = [
+    {
+        title: "REACT.JS DEVELOPER",
+        year: "2024 - Curent",
+        place: "CMARIX",
+    },
+    {
+        title: "REACT.JS DEVELOPER",
+        year: "2023-2024",
+        place: "Agrovikas Agritech PVT LTD",
+    },
+    {
+        title: "REACT.JS DEVELOPER",
+        year: "2022 - 2023",
+        place: "Avanzar Solution",
+    },
+   
+    ];
+
   return (
     <>
-      <div className="lg:h-screen w-screen px-6 py-6 lg:flex justify-around">
-        <div>
-            <div className="flex justify-center gap-x-5"> 
-                <div className="self-center"> <PiMedalThin className="self-center text-[2.5rem] lg:text-[3rem] font-normal self-center text-indigo-600 "/></div>
-                <div className="self-center bg-gradient-to-r from-indigo-500 via-indigo-300 to-indigo-100 text-transparent inline-block bg-clip-text text-[2rem] lg:text-[2.5rem] font-bold"> My Experience</div>
-            </div> 
+      <div className={`w-screen px-6 py-10 self-center transition-all duration-1000 ease-in-out will-change-transform will-change-opacity ${mounted ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-16 opacity-0 scale-95'}`}> 
 
-            <div className="flex flex-col gap-y-6 p-4">
-
-                <div className="border-0 rounded-xl bg-[#271639] shadow shadow-md lg:min-w-[33rem] lg:max-w-[33rem] p-4 hover:bg-gradient-to-r from-[#271639] via-[#583683] to-[#8a55cd]">
-                    <div className="text-[#8750f7] text-[1.3rem] font-semibold">2024 - 2025</div> 
-                    <div className="text-[1.5rem] font-semibold text-gray-100">REACT.JS DEVELOPER </div> 
-                    <div className="text-[1.3rem] font-normal text-gray-100"> CMARIX </div> 
-                </div>
-
-                <div className="border-0 rounded-xl bg-[#271639] shadow shadow-md lg:min-w-[33rem] lg:max-w-[33rem] p-4 hover:bg-gradient-to-r from-[#271639] via-[#583683] to-[#8a55cd]">
-                    <div className="text-[#8750f7] text-[1.3rem] font-semibold">2023 - 2024</div> 
-                    <div className="text-[1.5rem] font-semibold text-gray-100">REACT.JS DEVELOPER </div> 
-                    <div className="text-[1.3rem] font-normal text-gray-100">Agrovikas Agritech PVT LTD</div> 
-                </div>
-
-                <div className="border-0 rounded-xl bg-[#271639] shadow shadow-md lg:min-w-[33rem] lg:max-w-[33rem] p-4 hover:bg-gradient-to-r from-[#271639] via-[#583683] to-[#8a55cd] ">
-                    <div className="text-[#8750f7] text-[1.3rem] font-semibold">2022 - 2023</div> 
-                    <div className="text-[1.5rem] font-semibold text-gray-100">REACT.JS DEVELOPER </div> 
-                    <div className="text-[1.3rem] font-normal text-gray-100">Avanzar Solution</div> 
-                </div>
-            </div>
+        <div className="pb-10 text-center">
+          <h2 className="bg-gradient-to-r from-indigo-500 via-indigo-300 to-indigo-100 text-transparent bg-clip-text text-4xl md:text-5xl font-bold"> Skills & Experience </h2>
         </div>
 
-        <div>
-            <div className="flex justify-center gap-x-5"> 
-                <div className="self-center"> <GoMortarBoard className="self-center text-[3rem] font-normal self-center text-indigo-600 "/></div>
-                <div className="self-center bg-gradient-to-r from-indigo-500 via-indigo-300 to-indigo-100 text-transparent inline-block bg-clip-text text-[2rem] lg:text-[2.5rem] font-bold"> My Education</div>
+        <div className="w-full px-4 py-3 lg:flex lg:justify-between gap-10 ">
+          <div className="lg:w-1/2 w-full">
+            <div className="flex justify-center mb-6">
+              <div className="px-6 py-2 text-lg font-medium border border-purple-500 rounded-lg bg-purple-500 text-white"> My Skills </div>
             </div>
 
-            <div className="flex flex-col gap-y-6 p-4">
-                <div className="border-0 rounded-xl bg-[#271639] shadow shadow-md  p-4 hover:bg-gradient-to-r from-[#271639] via-[#583683] to-[#8a55cd]">
-                    <div className="text-[#8750f7] text-[1.3rem] font-semibold">2019 - 2022</div> 
-                    <div className="text-[1.5rem] font-semibold text-gray-100"> BCA (Bachelor of Computer Applications) </div> 
-                    <div className="text-[1.3rem] font-normal text-gray-100">JG College of computer application</div> 
+            <div className="grid grid-cols-1  gap-6">
+              {skills.map((skill) => (
+                <div key={skill.name}>
+                  <div className="flex justify-between mb-1">
+                    <span className="font-medium text-gray-200">{skill.name}</span>
+                    <span className="font-medium text-gray-200">{skill.value}%</span>
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div
+                      className={`${skill.color} h-2 rounded-full`}
+                      style={{ width: `${skill.value}%` }}
+                    ></div>
+                  </div>
                 </div>
+              ))}
+            </div>
+          </div>
 
-                <div className="border-0 rounded-xl bg-[#271639] shadow shadow-md  p-4 hover:bg-gradient-to-r from-[#271639] via-[#583683] to-[#8a55cd] ">
-                    <div className="text-[#8750f7] text-[1.3rem] font-semibold">2018 - 2019</div> 
-                    <div className="text-[1.5rem] font-semibold text-gray-100"> HSC (Higher Secondary School Certificate) </div> 
-                    <div className="text-[1.3rem] font-normal text-gray-100">Swaminarayan school</div> 
-                </div>
+          <div className="lg:w-1/2 w-full mt-10 lg:mt-0">
 
-                <div className="border-0 rounded-xl bg-[#271639] shadow shadow-md  p-4 hover:text-gray-100 hover:bg-gradient-to-r from-[#271639] via-[#583683] to-[#8a55cd] ">
-                    <div className="text-[#8750f7] text-[1.3rem] font-semibold">2016 - 2017</div> 
-                    <div className="text-[1.5rem] font-semibold text-gray-100"> SSC (Secondary School Certificate) </div> 
-                    <div className="text-[1.3rem] font-normal text-gray-100">Rachna high school</div> 
-                </div>
-            </div> 
+            <div className="flex justify-center mb-6">
+              <button
+                className={`px-6 py-2 text-lg font-medium border border-purple-500 rounded-l-lg ${ activeTab === "experience" ? "bg-purple-500 text-white" : "bg-white text-purple-500" }`}
+                onClick={() => setActiveTab("experience")} > Experience </button>
+              <button className={`px-6 py-2 text-lg font-medium border border-purple-500 rounded-r-lg ${activeTab === "education" ? "bg-purple-500 text-white" : "bg-white text-purple-500"}`}
+                onClick={() => setActiveTab("education")}>  Education  </button>
+            </div>
+
+            <div className="grid gap-6">
+              {activeTab === "experience"
+                ? experience.map((item, i) => (
+                    <div key={i} className="bg-[#271639] text-white px-5 py-2 rounded-lg hover:bg-gradient-to-r from-[#271639] via-[#583683] to-[#8a55cd] transition">
+                      <h4 className="text-[#8750f7] text-md font-semibold mb-1">{item.year}</h4>
+                      <h3 className="text-xl font-bold">{item.title}</h3>
+                      <p className="text-sm">{item.place}</p>
+                    </div>
+                  ))
+                : education.map((item, i) => (
+                    <div key={i} className="bg-[#271639] text-white px-5 py-2 rounded-lg hover:bg-gradient-to-r from-[#271639] via-[#583683] to-[#8a55cd] transition">
+                      <h4 className="text-[#8750f7] text-md font-semibold mb-1">{item.year}</h4>
+                      <h3 className="text-xl font-bold">{item.title}</h3>
+                      <p className="text-sm">{item.place}</p>
+                    </div>
+                  ))}
+            </div>
+          </div>
         </div>
       </div>
-    </>
+  </>
   );
 }
 
