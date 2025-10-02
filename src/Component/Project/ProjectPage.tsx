@@ -134,7 +134,7 @@ const projectList = [
     projects: [
       {
         name: "Purple PRN : On-Demand Healthcare Shift Portal",
-        skills: ["React", "TailwindCSS", "Redux Toolkit", "Gitlab"],
+        skills: ["React", "Typescript", "TailwindCSS", "Redux Toolkit", "Gitlab"],
         points: [
           "Actively engaged in daily scrum meetings, sprint planning sessions, and progress updates.",
           "Designed and crafted an intuitive User Interface using React, HTML, Tailwind CSS, and JavaScript.",
@@ -147,7 +147,7 @@ const projectList = [
       },
       {
         name: "DateBook AI : Online Dating Application",
-         skills: ["React", "TailwindCSS", "Redux Toolkit", "Gitlab"],
+         skills: ["React", "Typescript", "TailwindCSS", "Redux Toolkit", "Gitlab"],
         points: [
           "Actively engaged in daily scrum meetings, sprint planning sessions, and progress updates.",
           "Designed and crafted an intuitive User Interface using React, HTML, Tailwind CSS, and JavaScript.",
@@ -159,8 +159,8 @@ const projectList = [
         ]
       },
       {
-        name: "CRM With Dialer : On-Demand Healthcare Shift Portal",
-         skills: ["React", "TailwindCSS", "Redux Toolkit", "Gitlab"],
+        name: "CRM With Dialer : customer relationship management system integrated with a calling solution",
+         skills: ["React", "TailwindCSS", "Typescript", "Redux-Saga", "Node" , "MongoDB", "Trello"],
         points: [
           "Actively engaged in daily scrum meetings, sprint planning sessions, and progress updates.",
           "Designed and crafted an intuitive User Interface using React, HTML, Tailwind CSS, and JavaScript.",
@@ -172,8 +172,8 @@ const projectList = [
         ]
       },
       {
-        name: "KarmBees : On-Demand Healthcare Shift Portal",
-         skills: ["React", "TailwindCSS", "Redux Toolkit", "Gitlab"],
+        name: "KarmBees : Motivational social platform",
+         skills: [ "HTML", "CSS", "Javascript", "React", "Redux-Saga", "Bit bucket", "Jira"],
         points: [
           "Actively engaged in daily scrum meetings, sprint planning sessions, and progress updates.",
           "Designed and crafted an intuitive User Interface using React, HTML, Tailwind CSS, and JavaScript.",
@@ -185,8 +185,8 @@ const projectList = [
         ]
       },
       {
-        name: "ETIMS : On-Demand Healthcare Shift Portal",
-         skills: ["React", "TailwindCSS", "Redux Toolkit", "Gitlab"],
+        name: "ETIMS : Employee Training Management System",
+         skills: ["HTML", "CSS", "Javascript", "React", "Redux-Saga", "Bit bucket", "Jira"],
         points: [
           "Actively engaged in daily scrum meetings, sprint planning sessions, and progress updates.",
           "Designed and crafted an intuitive User Interface using React, HTML, Tailwind CSS, and JavaScript.",

@@ -75,7 +75,7 @@ const Dashboard = () => {
         >
           <div className="lg:flex justify-around px-[2rem] w-full max-w-6xl">
             {[
-              { number: "03", text: "Years of Experience" },
+              { number: "03 +", text: "Years of Experience" },
               { number: "05", text: "Projects Completed" },
               { number: "02", text: "Current Project" },
             ].map((stat, idx) => (
