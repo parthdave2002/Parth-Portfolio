@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import { motion } from "framer-motion";
 
 const ContactUs = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     const timer = setTimeout(() => setMounted(true), 50);
@@ -14,16 +16,20 @@ const ContactUs = () => {
     });
   }, [])
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
    console.log("calll")
   };
 
   return (
-    <div className="w-full px-6 pb-10 ">
-      <div className="pb-10">
-        <h2 className="text-center bg-gradient-to-r from-indigo-500 via-indigo-300 to-indigo-100 text-transparent bg-clip-text text-4xl md:text-5xl font-bold"> Contact Us </h2>
-      </div>
+  <motion.div ref={containerRef} initial="hidden"  animate={mounted ? "visible" : "hidden"} variants={fadeInUp} className="w-full px-6 py-8 flex flex-col items-center gap-y-10 ">
+      <motion.h2 initial={{ opacity: 0, y: -50 }} animate={mounted ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }} className="bg-gradient-to-r from-indigo-500 via-purple-400 to-pink-400 text-transparent bg-clip-text text-5xl font-bold text-center" > Contact Us</motion.h2>
+
 
       <div className="flex items-center justify-center ">
         <div className={`min-h-screen max-w-7xl w-full rounded-2xl shadow-lg flex flex-col lg:flex-row overflow-hidden transition-all duration-1000 ease-in-out will-change-transform will-change-opacity ${mounted ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-16 opacity-0 scale-95'}`}>
@@ -64,7 +70,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-    </div>
+     </motion.div>
   );
 };
 

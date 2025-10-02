@@ -1,13 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 const MyEducation = () => {
   const [activeTab, setActiveTab] = useState<"experience" | "education">("experience");
+  const containerRef = useRef<HTMLDivElement>(null);
   
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     const timer = setTimeout(() => setMounted(true), 50);
     return () => clearTimeout(timer);
   }, []);
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
 
     const skills = [
     { name: "HTML", value: 85, color: "bg-orange-400" },
@@ -59,11 +66,8 @@ const MyEducation = () => {
 
   return (
     <>
-      <div className={`w-screen px-6 py-10 self-center transition-all duration-1000 ease-in-out will-change-transform will-change-opacity ${mounted ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-16 opacity-0 scale-95'}`}> 
-
-        <div className="pb-10 text-center">
-          <h2 className="bg-gradient-to-r from-indigo-500 via-indigo-300 to-indigo-100 text-transparent bg-clip-text text-4xl md:text-5xl font-bold"> Skills & Experience </h2>
-        </div>
+      <motion.div ref={containerRef} initial="hidden" animate={mounted ? "visible" : "hidden"} variants={fadeInUp} className="w-full px-6 py-8 flex flex-col items-center gap-y-10 ">
+        <motion.h2 initial={{ opacity: 0, y: -50 }} animate={mounted ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }} className="bg-gradient-to-r from-indigo-500 via-purple-400 to-pink-400 text-transparent bg-clip-text text-5xl font-bold text-center" > Services</motion.h2>
 
         <div className="w-full px-4 py-3 lg:flex lg:justify-between gap-10 ">
           <div className="lg:w-1/2 w-full">
@@ -93,7 +97,7 @@ const MyEducation = () => {
 
             <div className="flex justify-center mb-6">
               <button
-                className={`px-6 py-2 text-lg font-medium border border-purple-500 rounded-l-lg ${ activeTab === "experience" ? "bg-purple-500 text-white" : "bg-white text-purple-500" }`}
+                className={`px-6 py-2 text-lg font-medium border border-purple-500 rounded-l-lg ${activeTab === "experience" ? "bg-purple-500 text-white" : "bg-white text-purple-500"}`}
                 onClick={() => setActiveTab("experience")} > Experience </button>
               <button className={`px-6 py-2 text-lg font-medium border border-purple-500 rounded-r-lg ${activeTab === "education" ? "bg-purple-500 text-white" : "bg-white text-purple-500"}`}
                 onClick={() => setActiveTab("education")}>  Education  </button>
@@ -102,24 +106,24 @@ const MyEducation = () => {
             <div className="grid gap-6">
               {activeTab === "experience"
                 ? experience.map((item, i) => (
-                    <div key={i} className="bg-[#271639] text-white px-5 py-2 rounded-lg hover:bg-gradient-to-r from-[#271639] via-[#583683] to-[#8a55cd] transition">
-                      <h4 className="text-[#8750f7] text-md font-semibold mb-1">{item.year}</h4>
-                      <h3 className="text-xl font-bold">{item.title}</h3>
-                      <p className="text-sm">{item.place}</p>
-                    </div>
-                  ))
+                  <div key={i} className="bg-[#271639] text-white px-5 py-2 rounded-lg hover:bg-gradient-to-r from-[#271639] via-[#583683] to-[#8a55cd] transition">
+                    <h4 className="text-[#8750f7] text-md font-semibold mb-1">{item.year}</h4>
+                    <h3 className="text-xl font-bold">{item.title}</h3>
+                    <p className="text-sm">{item.place}</p>
+                  </div>
+                ))
                 : education.map((item, i) => (
-                    <div key={i} className="bg-[#271639] text-white px-5 py-2 rounded-lg hover:bg-gradient-to-r from-[#271639] via-[#583683] to-[#8a55cd] transition">
-                      <h4 className="text-[#8750f7] text-md font-semibold mb-1">{item.year}</h4>
-                      <h3 className="text-xl font-bold">{item.title}</h3>
-                      <p className="text-sm">{item.place}</p>
-                    </div>
-                  ))}
+                  <div key={i} className="bg-[#271639] text-white px-5 py-2 rounded-lg hover:bg-gradient-to-r from-[#271639] via-[#583683] to-[#8a55cd] transition">
+                    <h4 className="text-[#8750f7] text-md font-semibold mb-1">{item.year}</h4>
+                    <h3 className="text-xl font-bold">{item.title}</h3>
+                    <p className="text-sm">{item.place}</p>
+                  </div>
+                ))}
             </div>
           </div>
         </div>
-      </div>
-  </>
+      </motion.div>
+    </>
   );
 }
 
