@@ -22,12 +22,12 @@ const Resume: React.FC = () => {
   return (
     <div className="min-h-screen w-screen px-8 py-8 self-center text-center">
       <div className="py-6">
-        <div className="self-center text-center bg-gradient-to-r from-indigo-500 via-indigo-300 to-indigo-100 text-transparent inline-block bg-clip-text text-[2.5rem] font-bold">My Resume</div>
-        {/* <div className="self-center content-center text-left lg:text-center text-gray-100 text-[1.3rem] font-normal whitespace-pre-line text-wrap">  We put your ideas and thus your wishes in the form of a unique web project that inspires you and your customers. </div> */}
+        <div className="self-center text-center bg-gradient-to-r from-indigo-500 via-indigo-300 to-indigo-100 text-transparent inline-block bg-clip-text text-[2.5rem] font-bold">About Me </div>
       </div>
 
       <div  className=' flex justify-center '>
         <div className='cursor-pointer border w-[12rem] flex justify-center border-indigo-500 hover:border-gray-500 rounded-xl p-3 text-indigo-600 hover:bg-gradient-to-r from-[#583683] to-[#413451] hover:text-gray-100 text-[1.2rem] font-semibold' onClick={() => DownloadPDfcall()}>Download Resume </div>
+        <a href="#projects" className="px-5 py-3 rounded-2xl bg-indigo-500 text-white font-medium shadow">  Download Resume </a>
       </div>
       
       <div className="pdf-container hidden lg:block">

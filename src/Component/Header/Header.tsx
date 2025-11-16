@@ -38,7 +38,6 @@ const Header = () => {
               <Link to="/" className="block hover:text-[#8750f7] py-2 px-4 cursor-pointer underline-animation">  Home </Link>
               <Link to="/about" className="block hover:text-[#8750f7] py-2 px-4 cursor-pointer underline-animation"> About </Link>
               <Link to="/project" className="block hover:text-[#8750f7] py-2 px-4 cursor-pointer underline-animation"> Projects </Link>
-              <Link to="/resume" className="block hover:text-[#8750f7] py-2 px-4 cursor-pointer underline-animation">  Resume </Link>
               <Link to="/certificate" className="block hover:text-[#8750f7] py-2 cursor-pointer">  Certificates </Link>
               <Link to="/contactUs"className="block hover:text-[#8750f7] py-2 px-4 cursor-pointer underline-animation"> Contact Us </Link>
             </div>
@@ -51,7 +50,6 @@ const Header = () => {
               <Link to="/" className="hover:text-[#8750f7] py-2 cursor-pointer w-full text-center" onClick={toggleMenu}> Home</Link>
               <Link to="/about" className="hover:text-[#8750f7] py-2 cursor-pointer w-full text-center" onClick={toggleMenu}> About </Link>
               <Link to="/project" className="hover:text-[#8750f7] py-2 cursor-pointer w-full text-center" onClick={toggleMenu}> Project </Link>
-              <Link to="/resume" className="hover:text-[#8750f7] py-2 cursor-pointer w-full text-center" onClick={toggleMenu}> Resume </Link>
               <Link to="/certificate" className="hover:text-[#8750f7] py-2 cursor-pointer w-full text-center" onClick={toggleMenu}> Certificates </Link>
               <Link to="/contactUs" className="hover:text-[#8750f7] py-2 cursor-pointer w-full text-center" onClick={toggleMenu}> Contact Us </Link>
             </div>

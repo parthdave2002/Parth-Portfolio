@@ -67,7 +67,7 @@ const MyEducation = () => {
   return (
     <>
       <motion.div ref={containerRef} initial="hidden" animate={mounted ? "visible" : "hidden"} variants={fadeInUp} className="w-full px-6 py-8 flex flex-col items-center gap-y-10 ">
-        <motion.h2 initial={{ opacity: 0, y: -50 }} animate={mounted ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }} className="bg-gradient-to-r from-indigo-500 via-purple-400 to-pink-400 text-transparent bg-clip-text text-5xl font-bold text-center" > Services</motion.h2>
+        <motion.h2 initial={{ opacity: 0, y: -50 }} animate={mounted ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }} className="bg-gradient-to-r from-indigo-500 via-purple-400 to-pink-400 text-transparent bg-clip-text text-5xl font-bold text-center" > Education / Skills</motion.h2>
 
         <div className="w-full px-4 py-3 lg:flex lg:justify-between gap-10 ">
           <div className="lg:w-1/2 w-full">
@@ -108,15 +108,15 @@ const MyEducation = () => {
                 ? experience.map((item, i) => (
                   <div key={i} className="bg-[#271639] text-white px-5 py-2 rounded-lg hover:bg-gradient-to-r from-[#271639] via-[#583683] to-[#8a55cd] transition">
                     <h4 className="text-[#8750f7] text-md font-semibold mb-1">{item.year}</h4>
-                    <h3 className="text-xl font-bold">{item.title}</h3>
-                    <p className="text-sm">{item.place}</p>
+                    <p className="text-xl font-bold">{item.place}</p>
+                    <h3 className="text-sm">{item.title}</h3>
                   </div>
                 ))
                 : education.map((item, i) => (
                   <div key={i} className="bg-[#271639] text-white px-5 py-2 rounded-lg hover:bg-gradient-to-r from-[#271639] via-[#583683] to-[#8a55cd] transition">
                     <h4 className="text-[#8750f7] text-md font-semibold mb-1">{item.year}</h4>
-                    <h3 className="text-xl font-bold">{item.title}</h3>
-                    <p className="text-sm">{item.place}</p>
+                    <p className="text-xl font-bold">{item.place}</p>
+                    <h3 className="text-sm">{item.title}</h3>
                   </div>
                 ))}
             </div>
